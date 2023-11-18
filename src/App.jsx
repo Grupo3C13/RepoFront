@@ -7,7 +7,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { PanelAdmin } from "./routes/PanelAdmin";
 import { ProductList } from "./routes/ProductList";
 import { ProductAdd } from "./routes/ProductAdd";
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import { CharacteristicList } from "./routes/CharacteristicList";
+import { Login } from "./routes/Login";
+import { Registro } from "./routes/Registro";
+import {CategoryList} from "./routes/CategoryList";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
@@ -15,11 +20,16 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/categoria" element={<CategoryDetail/>}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/registro" element={<Registro/>}/>
+        <Route path="/categoria/:id" element={<CategoryDetail/>}/>
         <Route path="/producto/:id" element={<ProductDetail/>}/>
         <Route path="/administracion" element={<PanelAdmin />}/>
         <Route path="/administracion/listaproductos" element={<ProductList/>}/> 
         <Route path="/administracion/agregarproducto" element={<ProductAdd/>}/>
+        <Route path="/administracion/listarcaracteristicas" element={<CharacteristicList />}/>
+        <Route path="/administracion/listarcategorias" element={<CategoryList />}/>
+        
       </Routes>
       <Footer />
     </Router>

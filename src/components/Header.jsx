@@ -12,8 +12,12 @@ export function Header() {
         <p>Aseguramos tu música</p>
       </div>
       <div className="botones">
+      <Link to='/registro'>
         <button>Crear cuenta</button>
+        </Link>
+        <Link to= "/login">
         <button>Iniciar sesion</button>
+        </Link>
       </div>
     </nav>
   );

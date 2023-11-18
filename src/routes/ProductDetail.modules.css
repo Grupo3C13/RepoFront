@@ -4,3 +4,37 @@
   padding: 10px;
   
 }
+.caracteristicas{
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+.iconos img{
+  width: 20px;
+  color: #623cea;
+  padding: 10px;
+}
+.celda{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* Estilos para pantallas medianas */
+@media (max-width: 767px) {
+  .caracteristicas{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    padding: 15px;
+  }
+  .celda{
+    display: flex;
+    align-items: center;
+    justify-content:stretch;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 576px) {
+  
+}

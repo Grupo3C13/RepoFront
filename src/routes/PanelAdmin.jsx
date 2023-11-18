@@ -9,7 +9,7 @@ export function PanelAdmin() {
       </div>
       <div className="mensaje-de-advertencia">
         <p>
-          Este sitio no está optimizado para pantallas de tamaño pequeño. Por
+          Este panel no está optimizado para pantallas de tamaño pequeño. Por
           favor, utiliza una pantalla de tamaño medio o superior.
         </p>
       </div>

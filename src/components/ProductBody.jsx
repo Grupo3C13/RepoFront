@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import "../components/ProductBody.modules.css";
+
 import { Gallery } from "./Gallery";
 
 export function ProductBody({
   titulo,
   img_src,
   descripcion,
-  caracteristicas,
   precio,
   categoria,
 }) {
@@ -20,11 +20,10 @@ export function ProductBody({
         <p>{categoria}</p>
         <h4>Descripción</h4>
         <p>{descripcion}</p>
-        <h4>Características</h4>
-        <p>{caracteristicas}</p>
+        
         <p className="precio">Precio de alquiler: {precio}</p>
       </div>
-      <button>Reservar</button>
+      {/* <button>Reservar</button> */}
     </div>
   );
 }

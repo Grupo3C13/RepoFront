@@ -10,13 +10,16 @@ function Sidebar() {
           <Link to="/administracion/listaproductos">Lista de Productos</Link>
         </li>
         <li>
-          <Link to="/">Lista de Categorías</Link>
+          <Link to="/administracion/listarcategorias">Lista de Categorías</Link>
         </li>
         <li>
           <Link to="/administracion/agregarproducto">Agregar Producto</Link>
         </li>
         <li>
           <Link to="/">Agregar Categoría</Link>
+        </li>
+        <li>
+          <Link to="/administracion/listarcaracteristicas">Administrar Características</Link>
         </li>
       </ul>
     </div>

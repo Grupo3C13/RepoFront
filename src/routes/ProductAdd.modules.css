@@ -19,3 +19,19 @@ label {
   background-color: #ebebeb;
   color: #623cea;
 }
+.mensaje-de-advertencia{
+  display: none;
+}
+/* Mostrar un mensaje si el tamaño de la pantalla está por debajo de 600px */
+@media (max-width: 600px) {
+  /* Aquí puedes definir estilos o reglas de visualización para el mensaje */
+  .mensaje-de-advertencia {
+    display: block; /* Mostrar el mensaje */
+    color: red;
+    margin: 25px;
+
+  }
+  .menu{
+      display: none;
+  }
+}

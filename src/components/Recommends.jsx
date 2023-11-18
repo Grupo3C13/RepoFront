@@ -1,18 +1,30 @@
 import { ProductCard } from "../components/ProductCard";
 //import instrumentos from "../images/instrumentos.jpg";
-import data from "../data";
+//import data from "../data";
 import "../components/Recommends.modules.css";
 import shuffle from "lodash.shuffle";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
+
 export function Recommends() {
+  const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1); // Página actual
   const itemsPerPage = 10; // Número de elementos por página
 
+  async function fetchData() {
+    const response = await fetch("http://127.0.0.1:8090/products");
+    const data = await response.json();
+    setData(data);
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   // Función para barajar los datos
   const shuffledData = shuffle(data);
-
+  //const [data, setData] = useState([]);
   // Función para dividir los datos en páginas aleatorias
   const getItemsForPage = (page) => {
     const startIndex = (page - 1) * itemsPerPage;
@@ -50,16 +62,19 @@ export function Recommends() {
       <div className="grid-container">
         {getItemsForPage(currentPage).map((item) => (
           <ProductCard
-          key={item.id}
-          img_src={item.img}
-          titulo={item.titulo}
-          descripcion={item.descripcion}
-          precio={item.precio}
-          categoria={item.categoria}
-          id={item.id}
-        />
+            key={item.id}
+            img_src={item.images.url}
+            titulo={item.name}
+            descripcion={item.description}
+            precio={item.price}
+            categoria={item.category}
+            id={item.id}
+          />
+
+          
         ))}
       </div>
+
       <ReactPaginate
         previousLabel={"Anterior"}
         nextLabel={"Siguiente"}

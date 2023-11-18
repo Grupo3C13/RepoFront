@@ -1,18 +1,13 @@
-.vista{
-    display: flex;
-    /* justify-content: flex-start; */
-    align-items: flex-start;
-}
-#products{
+#categories{
     padding: 15px;
     /* border-collapse: collapse; */
     width: 100%;
 }
-#products td, #products th {
+#categories td, #products th {
     border: 1px solid #686767;
   padding: 8px;
 }
-#products th{
+#categories th{
     padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;

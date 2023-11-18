@@ -13,7 +13,10 @@ export function ProductAdd() {
     brand: "",
     model: "",
     category: "",
+    policies: [],          
     images: [],
+    reservations: [],
+    scores: [],
   });
   const [error, setError] = useState("");
   const [mensaje, setMensaje] = useState("");
@@ -46,8 +49,10 @@ export function ProductAdd() {
           brand: "",
           model: "",
           category: 0,
-          
-          // images: [],
+          policies: [],          
+          images: [],
+          reservations: [],
+          scores: [],
         });
         setMensaje("Producto registrado con éxito!")
         setError('')
@@ -74,7 +79,7 @@ export function ProductAdd() {
   return (
     <div className="formulario">
       <TitleBar titulo="Agregar Producto" />
-      <div className="vista">
+      <div className="vista menu">
         <Sidebar />
         <form onSubmit={handleSubmit} className="product-form">
           <div>
@@ -86,7 +91,7 @@ export function ProductAdd() {
             <label>Descripción</label>
             <textarea value={product.description} onChange={(e) => setProduct({description: e.target.value})} />
           </div>
-          <div>
+          {/* <div>
             <label>Imágenes del producto</label>
             <input
               className="boton"
@@ -97,7 +102,7 @@ export function ProductAdd() {
               onChange={handleImagenesChange}
               // onChange={handleChange}
             />
-          </div>
+          </div> */}
           <div>
             <label>Precio</label>
             <input
@@ -126,6 +131,12 @@ export function ProductAdd() {
           {error && <p className="error">{error}</p>}
           {mensaje && <p className="enviado">{mensaje}</p>}
         </form>
+      </div>
+      <div className="mensaje-de-advertencia">
+        <p>
+          Este panel no está optimizado para pantallas de tamaño pequeño. Por
+          favor, utiliza una pantalla de tamaño medio o superior.
+        </p>
       </div>
     </div>
   );

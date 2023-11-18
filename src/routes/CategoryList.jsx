@@ -1,12 +1,12 @@
+import { useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import { TitleBar } from "../components/TitleBar";
-import "../routes/ProductList.modules.css";
-import { useState, useEffect } from "react";
+import "../routes/CategoryList.modules.css";
 
-export function ProductList() {
+export function CategoryList() {
   const [data, setData] = useState([]);
   async function fetchData() {
-    const response = await fetch("http://127.0.0.1:8090/products");
+    const response = await fetch("http://127.0.0.1:8090/categories");
     const data = await response.json();
     setData(data);
   }
@@ -17,10 +17,10 @@ export function ProductList() {
 
   return (
     <div>
-      <TitleBar titulo="Lista de Productos" />
+      <TitleBar titulo="Lista de Categorías" />
       <div className="vista menu">
         <Sidebar />
-        <table id="products">
+        <table id="categories">
           <tr>
             <th>Id</th>
             <th>Nombre</th>
@@ -29,8 +29,8 @@ export function ProductList() {
             <th>Acciones</th>
           </tr>
           <tbody>
-            {data.map(function (item){
-              return(
+            {data.map(function (item) {
+              return (
                 <tr key={item.id}>
                   <td>{item.id}</td>
                   <td>{item.name}</td>
@@ -38,7 +38,7 @@ export function ProductList() {
                   {/* <td>{item.category}</td> */}
                   <td>-</td>
                 </tr>
-              )
+              );
             })}
           </tbody>
         </table>
