@@ -9,11 +9,19 @@ export function ProductBody({
   descripcion,
   precio,
   categoria,
+  id,
 }) {
   return (
     <div className="prod_chars">
       <h3>{titulo}</h3>
-      <img src={img_src} alt="" />
+      {/* {Array.isArray(img_src) && img_src.length > 0 && (
+        <div>
+          {img_src.map((url, index) => (
+            <img key={index} src={url} alt={`${titulo}-img-${index}`} />
+          ))}
+        </div>
+      )} */}
+      <img src={img_src} alt={`${titulo}-img-${id}`} />
       {/* <Gallery img_src={img_src}/> */}
       <div className="container">
         <h4>Categoría</h4>

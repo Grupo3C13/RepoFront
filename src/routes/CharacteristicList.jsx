@@ -8,6 +8,7 @@ export function CharacteristicList() {
   const [data, setData] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newFeature, setNewFeature] = useState({ name: '', icon: '' });
+  const [editingFeature, setEditingFeature] = useState(null);
   const [mensaje, setMensaje] = useState("");
 
   async function fetchData() {
@@ -41,17 +42,52 @@ export function CharacteristicList() {
         setNewFeature({name: '', icon: ''})
         console.log('Característica guardada con éxito:', response.data);
         setMensaje("Característica registrada con éxito!")
-        
+        fetchData(); // Vuelve a cargar las características
         // closeModal();
       })
       .catch((error) => {
-        setNewFeature({name: '', icon: ''})
+        // setNewFeature({name: '', icon: ''})
         console.error('Error al guardar la característica:', error);
         setMensaje("Error al guardar la característica!")
       });
   };
 
-  
+  const handleEditFeature = () => {
+    axios
+    .put(`http://127.0.0.1:8090/categories/${editingFeature.id}`, newFeature) //ver bien el endpoint aca!
+    .then((response) => {
+      setEditingFeature(null);
+      setNewFeature({name: '', icon: ''})
+      console.log('Característica editada con éxito:', response.data);
+      setMensaje("Característica editada con éxito!")
+      closeModal(); // Cierra el modal después de editar
+      fetchData(); // Vuelve a cargar las características
+    })
+    .catch((error) => {
+      // Manejo de errores
+      console.error('Error al editar la característica:', error);
+      setMensaje("Error al editar la característica!")
+    });
+  };
+
+  const handleDeleteFeature = (featureId) => {
+    const shouldDelete = window.confirm('¿Estás seguro de que quieres eliminar esta característica?');
+    if (shouldDelete) {
+    axios
+      .delete(`http://127.0.0.1:8090/categories/${featureId}`) //ver bien el endpoint aca!
+      .then((response) => {
+        // Procesar la respuesta y realizar acciones necesarias
+        console.log('Característica eliminada con éxito:', response.data);
+        setMensaje("Característica eliminada con éxito!")
+        fetchData(); // Vuelve a cargar las características
+      })
+      .catch((error) => {
+        // Manejo de errores
+        console.error('Error al eliminar la característica:', error);
+        setMensaje("Error al eliminar la característica!")
+      });
+    }
+  };
 
   return (
     <div>
@@ -81,8 +117,8 @@ export function CharacteristicList() {
                   </td>
 
                   <td>
-                    <button>Editar</button>
-                    <button>Eliminar</button>
+                    <button onClick={() => handleEditFeature(item)}>Editar</button>
+                    <button onClick={() => handleDeleteFeature(item.id)}>Eliminar</button>
                   </td>
                 </tr>
               );

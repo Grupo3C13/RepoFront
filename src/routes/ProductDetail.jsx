@@ -16,10 +16,10 @@ export function ProductDetail() {
   const { id } = useParams();
   const [detalle, setDetalle] = useState([]);
 
-  function getData() {
-    //data.id = id;
-    const response = data[id - 1];
-    setDetalle(response);
+  async function getData() {
+    const response = await fetch(`http://127.0.0.1:8090/products/${id}`);
+    const data = await response.json();
+    setDetalle(data);
   }
   //console.log(detalle.titulo);
 
@@ -37,15 +37,17 @@ export function ProductDetail() {
       <a href="#" className="flecha" onClick={handleGoBack}>
         <img src={flecha} alt="" />
       </a>
+
       <ProductBody
-        img_src={detalle.img}
-        titulo={detalle.titulo}
-        categoria={detalle.categoria}
-        descripcion={detalle.descripcion}
-        precio={detalle.precio}
-      >
-        {/* <Gallery img_src={detalle.img} /> */}
-      </ProductBody>
+          key={detalle.id}
+          img_src={detalle.img && detalle.images[0].url}
+          titulo={detalle.name}
+          categoria={detalle.category && detalle.category.name}
+          descripcion={detalle.description}
+          precio={detalle.price}
+        />
+
+     
 
       {/* <Caracteristicas
         marca={detalle.marca}

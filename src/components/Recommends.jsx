@@ -24,7 +24,7 @@ export function Recommends() {
 
   // Función para barajar los datos
   const shuffledData = shuffle(data);
-  //const [data, setData] = useState([]);
+  
   // Función para dividir los datos en páginas aleatorias
   const getItemsForPage = (page) => {
     const startIndex = (page - 1) * itemsPerPage;
@@ -62,17 +62,17 @@ export function Recommends() {
           {getItemsForPage(currentPage).map((item) => (
             <ProductCard
               key={item.id}
-              img_src={item.images.url}
+              img_src={item.images && item.images[0].url}
               titulo={item.name}
               descripcion={item.description}
               precio={item.price}
-              categoria={item.category.name}
+              categoria={item.category && item.category.name}
               id={item.id}
             />
           ))}
         </div>
       ) : (
-        <p>No data available</p>
+        <p>Cargando...</p>
       )}
 
       <ReactPaginate

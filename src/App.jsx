@@ -11,7 +11,7 @@ import { CharacteristicList } from "./routes/CharacteristicList";
 import { Login } from "./routes/Login";
 import { Registro } from "./routes/Registro";
 import {CategoryList} from "./routes/CategoryList";
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

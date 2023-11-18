@@ -32,6 +32,7 @@ export function Categories() {
               titulo={item.name}
               descripcion={item.description}
               img_src={item.url}
+              id={item.id}
             />
           );
         })}
