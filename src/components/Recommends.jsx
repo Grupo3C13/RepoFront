@@ -6,7 +6,6 @@ import shuffle from "lodash.shuffle";
 import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
-
 export function Recommends() {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1); // Página actual
@@ -17,6 +16,7 @@ export function Recommends() {
     const data = await response.json();
     setData(data);
   }
+  console.log("Data:", data);
 
   useEffect(() => {
     fetchData();
@@ -55,25 +55,25 @@ export function Recommends() {
   return (
     <div>
       <h3>Recomendaciones</h3>
-      {/* <div className="grid-container">
-        {cards}
-        
-      </div> */}
-      <div className="grid-container">
-        {getItemsForPage(currentPage).map((item) => (
-          <ProductCard
-            key={item.id}
-            img_src={item.images.url}
-            titulo={item.name}
-            descripcion={item.description}
-            precio={item.price}
-            categoria={item.category}
-            id={item.id}
-          />
-
-          
-        ))}
-      </div>
+      
+      
+      {data.length > 0 ? (
+        <div className="grid-container">
+          {getItemsForPage(currentPage).map((item) => (
+            <ProductCard
+              key={item.id}
+              img_src={item.images.url}
+              titulo={item.name}
+              descripcion={item.description}
+              precio={item.price}
+              categoria={item.category.name}
+              id={item.id}
+            />
+          ))}
+        </div>
+      ) : (
+        <p>No data available</p>
+      )}
 
       <ReactPaginate
         previousLabel={"Anterior"}
