@@ -26,7 +26,7 @@ export function ProductDetail() {
 
   useEffect(() => {
     getData();
-  });
+  }, []);
 
   const handleGoBack = () => {
     window.history.back();

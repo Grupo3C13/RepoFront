@@ -42,3 +42,10 @@
   font-weight: bold;
   margin:15px;
 }
+.stars{
+  width: 15px;
+  height: 15px;
+  display: flex;
+  padding-bottom: 10px;
+  /* justify-content: space-evenly; */
+}

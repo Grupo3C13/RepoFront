@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import "../components/ProductCard.modules.css";
+import emptyStar from "../images/icons8-estrella-50.png";
+import fullStar from "../images/icons8-estrella-50 (1).png";
 
 export function ProductCard({
   img_src,
@@ -23,7 +25,15 @@ export function ProductCard({
         </div>
       )} */}
       <div className="prod_detail">
-        <h3>{titulo}</h3>
+      <h3>{titulo}</h3>
+        <div className="stars">
+          <img src={fullStar} alt="" />
+          <img src={fullStar} alt="" />
+          <img src={fullStar} alt="" />
+          <img src={fullStar} alt="" />
+          <img src={emptyStar} alt="" />
+        </div>
+        
         <p>{descripcion}</p>
         <p>Categoría: {categoria}</p>
         <p className="precio">Precio de alquiler: {precio}</p>
