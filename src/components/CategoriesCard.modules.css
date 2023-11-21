@@ -1,5 +1,5 @@
 .cat_card {
-  width: 350px;
+  width: 300px;
   border: solid;
   border-color: #fff;
   border-radius: 10px;
@@ -16,7 +16,7 @@
     border-color: #cec7b6;
 }
 .cat_card img {
-  width: 350px;
+  width: 300px;
   height: 250px;
   border-radius: 10px 10px 0 0;
   object-fit: cover;

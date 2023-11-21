@@ -62,11 +62,11 @@ export function Recommends() {
           {getItemsForPage(currentPage).map((item) => (
             <ProductCard
               key={item.id}
-              img_src={item.images && item.images[0].url}
+              img_src={item.images?.[0]?.url}
               titulo={item.name}
               descripcion={item.description}
               precio={item.price}
-              categoria={item.category && item.category.name}
+              categoria={item.category?.name}
               id={item.id}
             />
           ))}

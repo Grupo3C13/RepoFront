@@ -71,7 +71,7 @@ export function Registro() {
 
   return (
     <div className="container">
-      <TitleBar titulo="Registrarse" />
+      <TitleBar titulo="Crear cuenta" />
       <Form className="registerForm" onSubmit={handleSubmit}>
         {registrationSuccess && (
           <div className="alert alert-success">¡Registro exitoso! Redirigiendo...</div>

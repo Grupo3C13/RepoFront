@@ -11,6 +11,7 @@ import ico_marca from "../images/flag-solid.svg";
 import ico_modelo from "../images/asterisk-solid.svg";
 import ico_electrico from "../images/bolt-solid.svg";
 import ico_protector from "../images/gift-solid.svg";
+import { Policies } from "../components/Policies";
 
 export function ProductDetail() {
   const { id } = useParams();
@@ -40,7 +41,7 @@ export function ProductDetail() {
 
       <ProductBody
           key={detalle.id}
-          img_src={detalle.img && detalle.images[0].url}
+          img_src={detalle.images}
           titulo={detalle.name}
           categoria={detalle.category && detalle.category.name}
           descripcion={detalle.description}
@@ -57,22 +58,23 @@ export function ProductDetail() {
       /> */}
 
       <div>
-        <h4>Características</h4>
+        <h4 className="caract-title">Características</h4>
         <div className="caracteristicas iconos">
           <div className="celda">
             <img src={ico_marca} alt="" />
             <p>Marca: </p>
-            <p> {detalle.marca}</p>
+            <p> {detalle.brand}</p>
           </div>
           <div className="celda">
             <img src={ico_modelo} alt="" />
             <p>Modelo: </p>
-            <p> {detalle.modelo}</p>
+            <p> {detalle.model}</p>
           </div>
           <div className="celda">
             <img src={ico_electrico} alt="" />
             <p>Está en stock: </p>
-            <p> {detalle.stock}</p>
+            {/* <p> {detalle.active}</p> */}
+            <p> Si</p>
           </div>
           {/* <div className="celda">
             <img src={ico_protector} alt="" />
@@ -81,6 +83,7 @@ export function ProductDetail() {
           </div> */}
         </div>
       </div>
+      <Policies />
     </div>
   );
 }

@@ -21,3 +21,11 @@
 .container{
     margin-left: 35px;
 }
+.prod-par{
+    padding: 10px;
+}
+.custom-slider-container{
+    max-width: 50%;
+    max-height: 50%;
+  margin: 0 auto;
+}

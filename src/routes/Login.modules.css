@@ -1,13 +1,35 @@
 
-  /* .loginForm{
+  .loginForm{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
     box-shadow: 5px 5px 5px rgb(0, 0, 0 ,0.2);
+    padding: 15px;
+    width: 100vw;
+    height: 300px;
     
-  } */
+  }
   .color-primario {
     background-color: #623CEA;
+    color: #EBEBEB;
+  }
+  .color-primario:hover{
+    background-color: #EBEBEB;
+    color: #623CEA;
+  }
+  .text-muted{
+    color: lightgray;
+    display: block;
+  }
+  .alert-success{
+    color: #623CEA;
+    font-weight: bold;
+  }
+  .alert-danger{
+    color: red;
+    font-weight: bold;
+    display: block;
+    padding-bottom: 10px;
   }

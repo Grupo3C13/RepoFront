@@ -6,6 +6,7 @@ import percusion from "../images/percusion.jpg";
 import viento from "../images/viento.jpg";
 import { useState, useEffect } from "react";
 
+
 export function Categories() {
   const [data, setData] = useState([]);
 
@@ -20,23 +21,23 @@ export function Categories() {
   }, []);
 
   
+
   return (
     <div>
       <h3>Categorias de instrumentos</h3>
       <div className="categorias">
       
-        {data.map(function (item) {
-          return (
-            <CategoriesCard
-              key={item.id}
-              titulo={item.name}
-              descripcion={item.description}
-              img_src={item.url}
-              id={item.id}
-            />
-          );
-        })}
-        
+          {data.map(function (item) {
+            return (
+              <CategoriesCard
+                key={item.id}
+                titulo={item.name}
+                descripcion={item.description}
+                img_src={item.url}
+                id={item.id}
+              />
+            );
+          })}
         
         {/* <CategoriesCard 
                     titulo="Accesorios"
@@ -58,6 +59,7 @@ export function Categories() {
                     img_src={viento}
                     descripcion="Instrumentos de viento"
                 /> */}
+        
       </div>
     </div>
   );
