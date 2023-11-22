@@ -21,6 +21,13 @@ input {
     background-color: #EBEBEB;
     color: #623CEA;
 }
+.buscador-inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+
 /* Estilos para pantallas grandes */
 @media (min-width: 768px) {
     /* Estilos para pantallas grandes aquí */
@@ -37,7 +44,7 @@ input {
         background-color: rgb(62, 62, 62);
         text-align: center;
         color: #EBEBEB;
-        height: 135px;
+        height: 185px;
         padding-top: 15px;
     }
   }

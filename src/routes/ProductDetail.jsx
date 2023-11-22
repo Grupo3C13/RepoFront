@@ -13,9 +13,11 @@ import ico_electrico from "../images/bolt-solid.svg";
 import ico_protector from "../images/gift-solid.svg";
 import { Policies } from "../components/Policies";
 
+
 export function ProductDetail() {
   const { id } = useParams();
   const [detalle, setDetalle] = useState([]);
+  
 
   async function getData() {
     const response = await fetch(`http://127.0.0.1:8090/products/${id}`);
@@ -42,10 +44,10 @@ export function ProductDetail() {
       <ProductBody
           key={detalle.id}
           img_src={detalle.images}
-          titulo={detalle.name}
-          categoria={detalle.category && detalle.category.name}
-          descripcion={detalle.description}
-          precio={detalle.price}
+          name={detalle.name}
+          category={detalle.category && detalle.category.name}
+          description={detalle.description}
+          price={detalle.price}
         />
 
      
@@ -76,13 +78,11 @@ export function ProductDetail() {
             {/* <p> {detalle.active}</p> */}
             <p> Si</p>
           </div>
-          {/* <div className="celda">
-            <img src={ico_protector} alt="" />
-            <p>Tiene protector: </p>
-            <p> {detalle.protector}</p>
-          </div> */}
+          
         </div>
       </div>
+
+      
       <Policies />
     </div>
   );

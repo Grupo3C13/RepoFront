@@ -1,21 +1,22 @@
 /* eslint-disable react/prop-types */
 import "../components/ProductBody.modules.css";
-
+import { useEffect, useState } from "react";
 import { Gallery } from "./Gallery";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export function ProductBody({
-  titulo,
-  img_src,
-  descripcion,
-  precio,
-  categoria,
-  id,
-}) 
+import { FaShare } from "react-icons/fa";
+import ProductShareDialog from "../components/ProductoShareDialog";
+
+export function ProductBody({id, name, description, img_src, category, price}) 
 {
+  const [isShareDialogOpen, setIsShareDialogOpen] = useState(false);
+
+  const onShareClick = () => {
+    setIsShareDialogOpen(true);
+  };
 
   const settings = {
     dots: true,
@@ -30,7 +31,7 @@ export function ProductBody({
   };
   return (
     <div className="prod_chars">
-      <h3>{titulo}</h3>
+      <h3>{name}</h3>
       {/* {Array.isArray(img_src) && img_src.length > 0 && (
         <div>
           {img_src.map((url, index) => (
@@ -47,7 +48,7 @@ export function ProductBody({
             <img
               key={index}
               src={image.url}
-              alt={`${titulo}-img-${index}`}
+              alt={`${name}-img-${index}`}
               style={{ maxWidth: '100%', height: 'auto' }}
             />
           ))}
@@ -55,13 +56,17 @@ export function ProductBody({
       </div>
       <div className="container">
         <h4>Categoría</h4>
-        <p className="prod-par">{categoria}</p>
+        <p className="prod-par">{category}</p>
         <h4>Descripción</h4>
-        <p className="prod-par">{descripcion}</p>
+        <p className="prod-par">{description}</p>
 
-        <p className="precio">Precio de alquiler: {precio}</p>
+        <p className="precio">Precio de alquiler: {price}</p>
       </div>
       {/* <button>Reservar</button> */}
+      <button onClick={onShareClick}>
+        <FaShare />
+      </button>
+      {isShareDialogOpen && <ProductShareDialog product={name, description, price, img_src} />}
     </div>
   );
 }
