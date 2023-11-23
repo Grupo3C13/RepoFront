@@ -20,6 +20,13 @@ export function ProductAdd() {
   });
   const [error, setError] = useState("");
   const [mensaje, setMensaje] = useState("");
+  const [products, setProducts] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState({});
+  const [largeImage, setLargeImage] = useState(null);
+  const [selectedImages, setSelectedImages] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [saving, setSaving] = useState(false);
 
    const handleImagenesChange = (e) => {
     // Maneja la subida de imágenes y actualiza el estado "imagenes"
@@ -32,36 +39,66 @@ export function ProductAdd() {
     setProduct({ ...product, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
+    try {
+      setSaving(true);
+      // const imagesArray = selectedImages.split(',').map((img) => img.trim());
 
-    // Realizar una solicitud POST a la API con los datos del producto
-    axios
-      .post("http://localhost:8090/products", product)
-      .then((response) => {
-        console.log("Producto registrado con éxito:", response.data);
-        setProduct({
-          id: 0,
-          name: "",
-          description: "",
-          active: true,
-          price: 0,
-          brand: "",
-          model: "",
-          category: 0,
-          policies: [],          
-          images: [],
-          reservations: [],
-          scores: [],
-        });
-        setMensaje("Producto registrado con éxito!")
-        setError('')
-      })
-      .catch((error) => {
-        console.error("Error al registrar el producto:", error);
-        setError("Error al registrar el producto!")
-      });
+      const data = {
+        nombre: selectedProduct.name,
+        descripcion: selectedProduct.description,
+        // categoria: selectedProduct.category,
+        precio: selectedProduct.price,
+        // imagenes: imagesArray,
+      };
+
+      await axios.post(
+        `http://localhost:8090/products`,
+        data
+      );
+
+      const response = await axios.get(
+        `http://localhost:8090/products`
+      );
+      setProducts(response.data);
+      // closeModal();
+      setSaving(false);
+    } catch (error) {
+      console.error(error);
+      setSaving(false);
+    }
   };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   // Realizar una solicitud POST a la API con los datos del producto
+  //   axios
+  //     .post("http://localhost:8090/products", product)
+  //     .then((response) => {
+  //       console.log("Producto registrado con éxito:", response.data);
+  //       setProduct({
+  //         id: 0,
+  //         name: "",
+  //         description: "",
+  //         active: true,
+  //         price: 0,
+  //         brand: "",
+  //         model: "",
+  //         category: 0,
+  //         policies: [],          
+  //         images: [],
+  //         reservations: [],
+  //         scores: [],
+  //       });
+  //       setMensaje("Producto registrado con éxito!")
+  //       setError('')
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error al registrar el producto:", error);
+  //       setError("Error al registrar el producto!")
+  //     });
+  // };
 
   /* useEffect(() => {
     if (mensaje) {
