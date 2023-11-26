@@ -1,0 +1,219 @@
+/*.color-primario {
+    background-color: #623CEA;
+  }
+  .registerForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 100vw;
+    height: 350px;
+  }*/
+
+  h1 a {
+    text-decoration: none;
+    color: #faefff;
+  }
+  
+  #h2-form {
+    color: #ffeffe;
+  }
+  
+  nav,
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .username {
+    color: #e044f8;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+  
+  
+  .btn-logout {
+    border: 1px solid transparent;
+    border-radius: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background: none;
+    color: #623CEA;
+    cursor: pointer;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    transition: border-color 0.25s;
+  }
+  
+  .btn-logout:hover {
+    background-color: #fff;
+    color: #710687;
+  }
+  
+
+  .wrapper {
+    width: 400px;
+    background: rgb(150, 84, 194);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 34px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
+  
+  
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 77vh;
+    background-color: #fcefff;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+  }
+  
+  
+  body {
+    font-family: Inter, sans-serif;
+    background-color: #c99cdd;
+  }
+  
+  .input-group {
+    all: unset;
+    font-size: 1.25rem;
+    position: relative;
+    --primary: #faefff;
+  
+  }
+  
+  .input {
+    all: unset;
+    color: black;
+    padding: 1rem;
+    border: 1px solid #cd9cdd;
+    border-radius: 10px;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0.5rem;
+  
+  }
+  
+  .label {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    left: 1rem;
+    color: #f9efff;
+    pointer-events: none;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .input:focus {
+    border: 1px solid var(--primary);
+  }
+  
+  .input:is(:focus, :valid)~label {
+    transform: translateY(-170%) scale(0.7);
+    /* background-color: #9cc6dd; */
+    background-color: rgb(137, 84, 194);
+    padding-inline: 0.3rem;
+    color: var(--primary);
+  }
+  
+  .input:not(:placeholder-shown)~label,
+  .input:focus~label {
+    transform: translateY(-170%) scale(0.7);
+    background-color: rgb(159, 84, 194);
+    padding-inline: 0.3rem;
+    color: var(--primary);
+  }
+  
+  
+  
+  /* BOTON DE REGISTRO */
+  
+  .btn-lr {
+    /* background-color: transparent; */
+    background: linear-gradient(to right, #9141b1, #97328f);
+    font-size: 0.9rem;
+    color: #f4e7f7;
+    padding: 12px 33px;
+    margin-top: 10px;
+    border: 2px solid #cd9cdd;
+    border-radius: 18px;
+    position: relative;
+    /* z-index: -1; */
+    overflow: hidden;
+    transition: color 0.5s;
+  }
+  
+  .btn-lr:hover {
+    background: #dd9cdb;
+  }
+  
+  .btn-lr:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 120%;
+    height: 220%;
+    /* background-color: #2196f3;*/
+    background: #a11a8b;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  
+  .btn-lr:hover:before {
+    top: -50%;
+    left: -10%;
+  }
+  
+  .error-message {
+    color: #FF0000;
+    /* Color rojo */
+    font-size: 15px;
+    /* Tamaño de fuente */
+    margin-top: 5px;
+    /* Espacio superior */
+    text-align: center;
+    /* Alineación centrada */
+    background-color: #da88f1;
+    /* Fondo ligero */
+    border: 1px solid #5100ff;
+    /* Borde rojo */
+    padding: 5px;
+    /* Espaciado interno */
+    border-radius: 4px;
+    /* Bordes redondeados */
+  
+  }
+  
+  @media (max-width: 614px) {
+    .wrapper{
+      width: 340px;
+      padding: 40px;
+    }
+    
+  }

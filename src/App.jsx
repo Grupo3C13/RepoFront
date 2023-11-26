@@ -1,16 +1,17 @@
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
-import { CategoryDetail } from "./routes/CategoryDetail";
-import {ProductDetail} from "./routes/ProductDetail";
-import { Home } from "./routes/Home";
+import {Footer} from './components/Footer/Footer';
+import { Header } from "./components/Header/Header";
+import { CategoryDetail } from "./routes/Category/CategoryDetail";
+import {ProductDetail} from "./routes/ProductDetail/ProductDetail";
+import { Home } from "./routes/Home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { PanelAdmin } from "./routes/PanelAdmin";
-import { ProductList } from "./routes/ProductList";
-import { ProductAdd } from "./routes/ProductAdd";
-import { CharacteristicList } from "./routes/CharacteristicList";
-import { Login } from "./routes/Login";
-import { Registro } from "./routes/Registro";
-import {CategoryList} from "./routes/CategoryList";
+import { PanelAdmin } from "./routes/PanelAdmin/PanelAdmin";
+import { ProductList } from "./routes/ProductList/ProductList";
+import { ProductAdd } from "./routes/ProductAdd/ProductAdd";
+import { CharacteristicList } from "./routes/CharacteristicList/CharacteristicList";
+import { Login } from "./routes/LogIn/Login";
+import { Registro } from "./routes/LogIn/Registro";
+import {CategoryList} from "./routes/Category/CategoryList";
+//import { AccountProvider } from './components/Context/accountContext';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
 
