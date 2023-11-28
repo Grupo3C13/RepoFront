@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import "../components/ProductBody.modules.css";
+import "./ProductBody.modules.css";
 import { useEffect, useState } from "react";
-import { Gallery } from "./Gallery";
+import { Gallery } from "../Gallery/Gallery";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
