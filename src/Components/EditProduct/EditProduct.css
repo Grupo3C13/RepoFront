@@ -1,0 +1,102 @@
+.btn-dialog{
+    color: black;
+}
+
+.selected{
+    background-color: rgba(50, 113, 149,0.5);
+    border: 3px solid rgb(50, 113, 149);
+    color: white;
+}
+
+.edit-form-product{
+    background-color: #cae0ed;
+    gap: 5px;
+}
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+}
+
+.form-group>input,.form-group>textarea {
+    background-color: #cae0ed;
+    border: 1px solid #9cc6dd;
+    padding: 1rem;
+    border-radius: 10px;
+    resize: none;
+    text-align: right;
+}
+.edit-form-product>:nth-child(5)>input{
+    width:162.727px;
+}
+
+  input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+  }
+
+  .form-group>button{
+    background-color: transparent;
+    padding: 0.5rem;
+    border: 1px solid #2e7d32;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #2e7d32;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1em;
+    height: 48.35px;
+    width: 196.53px;
+  }
+  .form-group>button:hover{
+    background-color: rgba(46, 125, 50, 0.04);
+    color:#2e7d32;
+  }
+
+  .edit-form-product>.btn-dialog{
+    margin-top:20px;
+    background-color: #3350f7;
+    padding: 0.5rem;
+    border: 1px solid #22359f;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1em;
+    height: 48.35px;
+    width: 196.53px;
+  }
+  .edit-form-product>.btn-dialog:hover{
+    background-color: transparent;
+    color:#3350f7;
+  }
+
+
+.MuiDialogContent-root{
+    background-color: #cae0ed;
+}
+.MuiPaper-root{
+    width: 35vw;
+}
+.MuiDialogActions-root{
+    background-color:#cae0ed;
+}
+.MuiDialogActions-root>button{
+    color: red;
+}
+.MuiDialogContent-root>div{
+    margin: 5px;
+    
+}
+.MuiDialogContent-root>div>label{
+    cursor: pointer; 
+ }
+
+
+.MuiDialogContent-root>div:hover{
+    background-color: #abc0cd
+    
+}

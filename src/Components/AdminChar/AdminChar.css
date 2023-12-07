@@ -1,0 +1,128 @@
+.listadecaracteristicas{    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+
+}
+.listCaract {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#e697d8, white);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.elementsCaract {
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+}
+.listId{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 5px 0;
+}
+
+.listCaract h2 {
+    color: #244356;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.listCaract ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.listCaract li {
+    font-size: 16px;
+   /* /* margin: 5px 0;*/ 
+}
+
+.listCaract li:last-child {
+    border-bottom: none;
+}
+.btnCrear{
+    margin-left: 120px;
+    margin-right: 120px;
+    background: linear-gradient(to right, #418cb1, #327297);
+	font-size: 0.9rem;
+	color: #e7f1f7;
+	padding: 10px 10px;
+	margin-top: 10px;
+	border: 2px solid #9cc6dd;
+	border-radius: 18px;
+	position: relative;
+	overflow: hidden;
+	transition: color 0.5s;
+    
+}
+.editPopup{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #244356;
+    font-weight: 700;
+    align-items: center;
+}
+.editPopup>input{
+    padding-left: 10px;
+    color: rgb(0, 0, 0);
+    width: 70%;
+    background-color:#fcfeff;
+    border: 2px #623cea solid;
+    border-radius: 8px;
+    font-weight: 500;
+    height: 4vh;
+    margin: 5%;
+}
+.editPopup>button{
+        /* background-color: transparent; */
+        background-color: #623cea;
+        font-size: 0.9rem;
+        color: white;
+        padding: 5px 33px;
+        margin-top: 5px;
+        border: 1px solid black;
+        border-radius: 10px;
+        position: relative;
+        margin-bottom: 10px;
+}
+
+.editPopup>button:hover {
+cursor: pointer;
+}
+.btnEditcharacteristics{
+    height: 5vh;
+    margin-right: 20px;
+    background-color: rgb(45, 17, 76);
+    border-radius: 50%;
+    color: white; /* Cambia el color del texto a blanco */
+    border: 1px solid #623cea; /* Cambia el borde al mismo color de fondo */
+    font-size: medium;
+}
+.btnDelete{    height: 5vh;
+    margin-right: 20px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid #623cea;
+    font-size: medium;
+}
+
+.btncrearChar{   height: 5vh;
+    margin-right: 20px;
+    background-color: rgb(114, 166, 121);
+    border-radius: 0%;
+    color: white;
+    border: 1px solid #000000;
+    font-size: medium;
+
+}

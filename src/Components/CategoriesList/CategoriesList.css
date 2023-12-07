@@ -1,0 +1,48 @@
+/* Estilos para Listarcategory */
+.listacategorias{
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+}
+
+.categories-list {
+
+    background: rgb(84, 157, 194);
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+.vertical-list {
+    display: flex;
+    flex-direction: column;
+    color: #cae0ed;
+}
+
+.categories-list h2 {
+    color: #244356;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.categories-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.categories-list li {
+    font-size: 16px;
+    margin: 5px 0;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+.categories-list li:last-child {
+    border-bottom: none;
+}
+
+.categories-list ul li {
+    display: block;
+    /* Esto asegura que los elementos de la lista se muestren uno debajo del otro (verticalmente) */
+}

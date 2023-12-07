@@ -1,0 +1,119 @@
+.recomendacion {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 58px;
+    color: #623CEA;
+    font-weight: bolder;
+    font-style: italic;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    letter-spacing: 3px;
+ 
+}
+
+.imagenReco{
+    max-width: 200px;
+    max-height: 200;
+}
+
+
+.listaPaginada {
+    padding: 20px;
+    display: grid;
+    background: transparent;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+
+li {
+    width: 10%;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.instrument {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.title {
+    font-size: 14px;
+    margin: 0
+}
+
+p {
+    color: black;
+    padding-top: 5px;
+    margin-bottom: 2px;
+    align-items: center;
+}
+
+.price {
+    color: rgb(7, 7, 7);
+    font-size: 20px;
+}
+
+.instrument img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+}
+
+.listaContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;;
+    padding-top: 35px;
+}
+
+
+@media (max-width: 768px) {
+    .listaPaginada {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+
+    .instrument img {
+        width: 200px;
+    }
+}
+
+/* Media query for screens smaller than 480px */
+@media (max-width: 480px) {
+    .listaPaginada {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .recomendacion {
+        font-size: 38px;
+        /* You can adjust the font size as needed */
+    }
+
+}
+
+@media (max-width: 340px) {
+    .recomendacion {
+        font-size: 28px;
+        /* You can adjust the font size as needed */
+    }
+}

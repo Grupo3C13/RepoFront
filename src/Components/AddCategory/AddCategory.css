@@ -1,0 +1,73 @@
+/* Estilos para AddCategory */
+
+.AddCategory{  
+    text-align: center;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+
+    }
+.agregar-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#e697d8, white);
+    padding: 20px;
+    border-radius: 10px;
+    color: #EFFAFF;
+}
+
+.agregar-category-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.agregar-category h2 {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.agregar-category form {
+    display: flex;
+    flex-direction: column;
+}
+
+.agregar-category label {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.agregar-category input,
+.agregar-category textarea {
+    width: 300px;
+    height: 50px;
+    background-color: #ffffff;
+    margin-top: 5px;
+    border: 5px solid #623cea;
+    border-radius: 8px;
+    padding: 5px;
+
+}
+
+.agregar-category button[type="submit"] {
+    background-color: #623cea;
+    /* Cambia el color de fondo a verde brillante */
+    color: white;
+    /* Cambia el color del texto a blanco */
+    border: 1px solid #fff;
+    /* Cambia el borde al mismo color de fondo */
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+
+
+.AddCategory{  
+    align-self: center;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+
+    }
+}

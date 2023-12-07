@@ -1,0 +1,11 @@
+.politicas{
+    display: flex;
+    padding-bottom: 15px;
+}
+.pol-title{
+    text-decoration: underline;
+}
+.pol-par{
+    padding-left: 15px;
+    padding-right: 15px;
+}

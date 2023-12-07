@@ -1,0 +1,90 @@
+.Container {
+    flex-direction: column;
+    font-weight: 700;
+    align-items: center;
+    padding-top: 10px;
+    /* padding-bottom: 200px; */
+    /* background-color: transparent */    
+    background: linear-gradient(#e697d8, white);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+.divSelect{
+    width: 50%;
+    text-align: center;
+}
+.divSelect>label{
+    font-size: 20px;
+
+}
+.divSelect>div>label{
+    color: rgb(6, 0, 5);
+}
+
+.ccSelect{
+    
+    display: flex;
+    gap: 20px;
+}
+.FormBtn {
+    margin-top: 10px;
+    background-color: #623cea;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #EFFAFF;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-left: 10px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    transition: border-color 0.25s;
+
+}
+
+.titulo {
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+}
+
+.input {
+    width: 300px;
+    height: 50px;
+    background-color: #ffffff;
+    margin-top: 5px;
+    border: 5px solid #623cea;
+    border-radius: 8px;
+    padding: 5px;
+
+}
+
+.formulario {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* margin-top: 10px; */
+    /* font-size: 30px; */
+}
+
+.labels {
+    color: #152e37;
+}
+
+.guardaIns{
+    display: flex;
+    flex-direction: column;
+
+}

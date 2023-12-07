@@ -1,0 +1,35 @@
+.reviewListection{
+    width: 90%;
+}
+.reviewList>li>div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reviewListection h2{
+    color: black;
+}
+.reviewListection h3{
+    margin: 0px;
+    color: black;
+}
+
+.reviewList{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.reviewListection p{
+    margin: 0px;
+}
+
+.reviewListection li > p:nth-child(3){
+    font-size: 12px;
+    color: #615D5D;
+
+}
+.starIcon{
+    color: rgb(255, 170, 0)
+}

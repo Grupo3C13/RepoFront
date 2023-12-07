@@ -1,0 +1,65 @@
+.listaProductosAdmin{
+  width: 80%;
+}
+
+.listaContainerAdmin {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: black;
+  flex-direction: column;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: linear-gradient(#e697d8, white);
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.lista {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 5px 0;
+}
+
+.tituloListaAdmin {
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.id {
+  font-weight: bold;
+}
+
+.btnEdit {
+  height: 5vh;
+  margin-right: 20px;
+  background-color: rgb(45, 17, 76);
+  border-radius: 50%;
+  color: white; /* Cambia el color del texto a blanco */
+  border: 1px solid #623cea; /* Cambia el borde al mismo color de fondo */
+  font-size: medium;
+}
+
+.btnEliminar {
+  height: 5vh;
+  margin-right: 20px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid #623cea;
+  font-size: medium;
+}
+.admin-btn-container {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+
+
+}

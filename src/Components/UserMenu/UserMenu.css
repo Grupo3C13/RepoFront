@@ -1,0 +1,38 @@
+
+.avatar-container-open {
+    position: relative;
+}
+
+.custom-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 1;
+    z-index: 1;
+    color: white;
+    background-color: #623cea;
+    border: 1px solid black;
+    padding: 10px;
+    min-width: 150px;
+}
+
+.custom-dropdown-item {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+}
+
+.custom-logout {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
+.custom-logout:hover {
+    color: #0056b3; 
+}

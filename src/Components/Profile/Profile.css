@@ -1,0 +1,56 @@
+/* Estilos para Perfil */
+
+.contentContainerPerfil {
+    height: 76vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfil-list {
+    max-width: 1500px; /* Ajusta el valor según tus necesidades */
+    background: rgb(194, 84, 174);
+    padding: 10px;
+}
+
+.vertical-list {
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.perfil-list h2 {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.perfil-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.perfil-list li {
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 5px 0;
+}
+
+.perfil-list li:last-child {
+    border-bottom: none;
+}
+
+.perfil-list ul li {
+    
+    text-align: center;
+    display: block;
+}
+
+.normal-text {
+    font-weight: normal;
+    color: black;
+    font-size: larger;
+    text-align: center;
+
+}

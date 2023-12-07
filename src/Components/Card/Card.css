@@ -1,0 +1,161 @@
+a.buttonComprar{
+    color: white;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    height: min-content;
+    padding: 25px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid black;
+    transition: box-shadow 0.3s;
+}
+.card:hover{
+    box-shadow: 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-img {
+    width: 100%;
+    text-align: center;
+}
+.card-info{
+    font-size: 15px;
+    color: rgb(70, 70, 70);
+    font-weight: 550;
+    margin-bottom: 10px;
+    padding-left: 10%;
+}
+.card-star{
+    color: #623cea;
+}
+.card .card-img img {
+    max-width: 80%;
+    margin: 0 15px 0;
+    transition: 1s;
+    max-height: 100px;
+}
+
+.card .card-name h3 {
+    color: #1b2430;
+    font-size: 25px;
+    letter-spacing: -0.5px;
+}
+
+.card .card-name p {
+    color: #b3bac3;
+    font-size: 18px;
+    margin-top: -4px;
+    letter-spacing: -0.5px;
+}
+
+.card .card-details {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.card .card-details span {
+    color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card .card-details p {
+    color: #1b2430;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: -2px;
+}
+
+.card button {
+    width: 40%;
+    height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #623CEA;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card button:hover {
+    background-color: #aa0000;
+}
+
+.body-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.buttonFavContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 13px;
+}
+
+.FavCardCorazon{
+    font-size: 31px;
+}
+
+
+
+@media (max-width: 1400px) {
+
+    .body-cards {
+        width: auto;
+    }
+
+    .card {
+        width: 80%;
+        /* margin: 0px 0; */
+    }
+
+    .card .card-img img {
+        height: 150px;
+    }
+
+    .card:hover .card-img img {
+        height: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 70%;
+        margin: 10px 0;
+    }
+
+    .card .card-img img {
+        height: 150px;
+    }
+
+    .card:hover .card-img img {
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card .card-img img {
+        height: 120px;
+    }
+
+    .card:hover .card-img img {
+        height: 100px;
+    }
+}

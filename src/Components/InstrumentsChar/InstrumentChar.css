@@ -1,0 +1,33 @@
+/* .divAmplio{
+    
+    
+} */
+
+.caract{
+    font-size: 24px;
+    text-align: center;
+    margin: 1px;
+    
+}
+
+.listaCarac{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.listaIcon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.listaIcon>p{
+    margin-top: 0px;
+    margin-left: 8px;
+}
+
+.imgIcono{
+    max-width: 25px;
+}

@@ -1,0 +1,122 @@
+.listaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: #eeeeee;
+}
+
+.listaPaginada {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    gap: 100px;
+    padding: 20px;
+    background-color: #eeeeee;
+}
+
+.instrument {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-anterior,
+.btn-siguiente {
+    background-color: #EFFAFF;
+    color: #623CEA;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-left: 10px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: inherit;
+    transition: border-color 0.25s;
+}
+
+.cantinstrumentos {
+    margin-right: 50px;
+    align-self: flex-end;
+    color: black;
+}
+
+
+@media (max-width: 1350px) {
+    
+    .listaPaginada {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(80px, 1fr));
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1050px) {
+    
+    .listaPaginada {
+        grid-template-columns: repeat(3, minmax(80px, 1fr));
+        
+    }
+}
+
+@media (max-width: 800px) {
+    
+    .listaPaginada {
+        grid-template-columns: repeat(2, minmax(80px, 1fr));
+        
+    }
+}
+
+
+@media (max-width: 614px) {
+
+    
+
+    .listaPaginada {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(60px, 1fr));
+        max-width: 50%;
+        gap: 10px;
+    }
+
+    .listaContainer {
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+
+    .instrument img {
+        width: 50%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-size: 10px;
+    }
+
+    .btn-anterior,
+    .btn-siguiente {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .btn-siguiente:not(:first-child):not(:last-child),
+    .btn-anterior~.btn-siguiente:not(:last-child) {
+        display: none;
+    }
+}
